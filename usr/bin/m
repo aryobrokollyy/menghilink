@@ -128,17 +128,9 @@ read -n 1 -s -r -p "Press any key to back on menu"
 echo -e Proses Uninstall Hilink berjalan, mohon ditunggu......
 sleep 3
 echo -e
-rm -f $DIR/m
-rm -f $DIR/hilink
-rm -f $DIR/balong-nvtool
-rm -f $DIR/updatehilink
-rm -f $CONF/hilink
-rm -f $DIR/elink
-rm -f $CONT/hilink.lua 
-rm -f $MODEL/hilink.lua
 clear
 echo -e
-echo -e Done.....
+echo -e Uninstall Done.....
 echo -e
 read -n 1 -s -r -p "Press any key to back on menu"
 /usr/bin/m
