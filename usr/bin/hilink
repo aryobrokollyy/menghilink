@@ -211,6 +211,16 @@ info(){
  echo -e "UP Frequency : $upfreq"
  echo -e "---------------------------"
 }
+uninstall(){
+rm -f $DIR/m
+rm -f $DIR/hilink
+rm -f $DIR/balong-nvtool
+rm -f $DIR/updatehilink
+rm -f $CONF/hilink
+rm -f $DIR/elink
+rm -f $CONT/hilink.lua 
+rm -f $MODEL/hilink.lua
+}
 iphunter(){
 clear
 ipmod
