@@ -2,7 +2,11 @@
 # Installation script by ARYO.
 
 DIR=/usr/bin
-
+CONF=/etc/config
+MODEL=/usr/lib/lua/luci/model/cbi
+CONT=/usr/lib/lua/luci/controller
+URL=https://raw.githubusercontent.com/aryobrokollyy/menghilink/main
+URL1=https://raw.githubusercontent.com/saputribosen/hilink/main
 
 finish(){
 clear
@@ -21,10 +25,14 @@ download_files()
 {
     	clear
   	echo "Downloading files from repo hilink mak cling..."
-   	wget -O $DIR/m https://raw.githubusercontent.com/aryobrokolly/menghilink/main/usr/bin/m && chmod +x $DIR/m
- 	wget -O $DIR/hilink https://raw.githubusercontent.com/aryobrokolly/menghilink/main/usr/bin/hilink && chmod +x $DIR/hilink
-  	wget -O $DIR/balong-nvtool https://raw.githubusercontent.com/aryobrokolly/menghilink/main/usr/bin/balong-nvtool && chmod +x $DIR/balong-nvtool
-   	wget -O $DIR/updatehilink https://raw.githubusercontent.com/aryobrokolly/menghilink/main/usr/bin/balong-nvtool && chmod +x $DIR/updatehilink
+   	wget -O $DIR/m $URL/usr/bin/m && chmod +x $DIR/m
+ 	wget -O $DIR/hilink $URL/usr/bin/hilink && chmod +x $DIR/hilink
+  	wget -O $DIR/balong-nvtool $URL/usr/bin/balong-nvtool && chmod +x $DIR/balong-nvtool
+   	wget -O $DIR/updatehilink $URL/usr/bin/balong-nvtool && chmod +x $DIR/updatehilink
+        wget -O $CONF/hilink $URL1/hilink
+	wget -O $DIR/elink $URL1/elink.sh && chmod +x $DIR/elink
+        wget -O $CONT/hilink.lua $URL1/controller/hilink.lua && chmod +x $CONT/hilink.lua
+        wget -O $MODEL/hilink.lua $URL1/cbi/hilink.lua && chmod +x $MODEL/hilink.lua
     	finish
 }
 
