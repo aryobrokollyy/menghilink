@@ -49,7 +49,7 @@ download_files() {
     download_file "$DIR/m" "$URL/usr/bin/m"
     download_file "$DIR/hilink" "$URL/usr/bin/hilink"
     download_file "$DIR/balong-nvtool" "$URL/usr/bin/balong-nvtool"
-    download_file "$DIR/updatehilink" "$URL/usr/bin/balong-nvtool"
+    download_file "$DIR/updatehilink" "$URL/usr/bin/updatehilink"
     download_file "$CONF/hilink" "$URL1/hilink"
     download_file "$DIR/elink" "$URL1/elink.sh"
     download_file "$CONT/hilink.lua" "$URL1/controller/hilink.lua"
