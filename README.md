@@ -11,11 +11,28 @@ Copy paste on terminal OPENWRT:
 ```
 bash -c "$(wget -qO - 'https://raw.githubusercontent.com/aryobrokollyy/menghilink/master/setup.sh')"
 ```
-
+# Menu Hilink
+- Access Menu on terminal
+```
+m
+```
 # How to ?
+
+- Change ip WAN 
+```
+hilink iphunter
+```
+- LOCK PCI 
+```
+hilink lock
+```
+- UNLOCK PCI 
+```
+hilink unlock
+```
 - Update Script
 ```
-hilink update
+updatehilink
 ```
 
 - Uninstall Script
