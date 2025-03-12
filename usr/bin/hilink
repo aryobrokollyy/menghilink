@@ -288,7 +288,7 @@ data=$(curl -s http://$ipmodem/api/webserver/SesTokInfo -H "Host: $ipmodem" -H "
  echo -e "Device : $tp"
  echo -e "Wan IP : $ipp"
  echo -e "---------------------------"
- sleep 35
+ sleep 15
 send_telegram
 }
 
