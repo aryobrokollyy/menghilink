@@ -1,4 +1,4 @@
-# SCRIPT MODEM HILINK DAN PETUNJUK INSTALL
+# HILINK MODEM SCRIPT AND INSTALLATION INSTRUCTIONS
 # TESTED
 - ***Modem E5577***
 - ***Modem E5372***
@@ -18,11 +18,12 @@ bash -c "$(wget -qO - 'https://raw.githubusercontent.com/aryobrokollyy/menghilin
 
 <br>
 <br>
-# Mau tanya Admin<br>
-  kLIK DISINI : https://www.lynk.id/aryobrokolly
-<br>
-# DONASI
-- ***Silahkan Donasi Seiklasnya untuk akses script ini***
 
-<img src="https://raw.githubusercontent.com/aryobrokolly/modepesawat/main/barcode-aryobrokolly.jpg" alt="DONASI" width="350" height="470">
+# Asked Admin<br>
+  kLIK : https://www.lynk.id/aryobrokolly
+<br>
+# DONATE
+<br>
+
+<img src="https://raw.githubusercontent.com/aryobrokolly/modepesawat/main/barcode-aryobrokolly.jpg" alt="DONASI" width="350" height="470" align="center">
 
