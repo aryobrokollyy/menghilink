@@ -43,7 +43,7 @@ hilink uninstall
 <br>
 <br>
 
-# Asked Admin<br>
+# Asked <br>
   kLIK : https://www.lynk.id/aryobrokolly
 <br>
 # DONATE
