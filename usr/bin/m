@@ -140,7 +140,7 @@ clear
 echo -e
 echo -e Uninstall Done.....
 echo -e
-read -n 1 -s -r -p "Press any key to back on menu"
+read -n 1 -s -r -p "Press any key to back"
  ;;
 
 x) exit ;;
