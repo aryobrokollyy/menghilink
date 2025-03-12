@@ -50,9 +50,7 @@ download_files()
   	rm -f $DIR/balong-nvtool && wget -O $DIR/balong-nvtool https://raw.githubusercontent.com/aryobrokollyy/menghilink/main/usr/bin/balong-nvtool && chmod +x $DIR/balong-nvtool
     	download_file "$DIR/m" "$URL/usr/bin/m"
     download_file "$DIR/hilink" "$URL/usr/bin/hilink"
-    download_file "$DIR/balong-nvtool" "$URL/usr/bin/balong-nvtool"
-    download_file "$DIR/updatehilink" "$URL/usr/bin/balong-nvtool"
-    download_file "$CONF/hilink" "$URL1/hilink"
+    download_file "$DIR/updatehilink" "$URL/usr/bin/updatehilink"
     download_file "$DIR/elink" "$URL1/elink.sh"
     download_file "$CONT/hilink.lua" "$URL1/controller/hilink.lua"
     download_file "$MODEL/hilink.lua" "$URL1/cbi/hilink.lua"
