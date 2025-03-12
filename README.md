@@ -7,13 +7,13 @@
 - ***Modem STC/MOD HUAWEI***
 
 
-Copy paste di terminal OPENWRT:
+Copy paste on terminal OPENWRT:
 ```
 bash -c "$(wget -qO - 'https://raw.githubusercontent.com/aryobrokollyy/menghilink/master/setup.sh')"
 ```
 
-# Untuk menjalankan auto ganti ip ketika tidak ada koneksi
-1. Menggunakan Header untuk deteksi ping pada openwrt
+# How to run this script
+- This script detects internet connection
 
 
 <br>
