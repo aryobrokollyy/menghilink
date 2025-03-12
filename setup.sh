@@ -9,17 +9,6 @@ URL=https://raw.githubusercontent.com/aryobrokollyy/menghilink/main
 URL1=https://raw.githubusercontent.com/saputribosen/hilink/main
 MAX_RETRIES=3
 
-install_telegram(){
-    echo "Install Telegram Settings"
-    clear
-    sleep 1
-   	wget -O $MODEL/telegram_config.lua https://raw.githubusercontent.com/aryobrokollyy/Telegrambuset/main/telegram_config.lua
- 	wget -O $DIR/telegram https://raw.githubusercontent.com/aryobrokollyy/Telegrambuset/main/usr/bin/telegram && chmod +x $DIR/telegram
- 	wget -O $CONF/telegram https://raw.githubusercontent.com/aryobrokollyy/Telegrambuset/main/etc/config/telegram
-  	wget -O $CON/telegram.lua https://raw.githubusercontent.com/aryobrokollyy/Telegrambuset/main/telegram.lua && chmod +x $CON/telegram.lua
-    clear
-}
-
 finish() {
     clear
     echo ""
@@ -68,15 +57,6 @@ download_files() {
 
     finish
 }
-
-echo ""
-echo "Install Telegram Setting."
-read -p "Do you want to install telegram settings (y/n)? " yn
-case $yn in
-    [Yy]* ) install_telegram;;
-    [Nn]* ) echo "Skipping telegram installation...";;
-    * ) echo "Invalid input. Skipping telegram installation...";;
-esac
 
 echo ""
 echo "Install Script code from repo aryo."
