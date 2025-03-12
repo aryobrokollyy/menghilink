@@ -297,7 +297,7 @@ infotele() {
 ==============
 🔰 Modem Name: $tp
 🔰 IP Modem: $ipmodem
-🔰 IP Current: $ipc
+🔰 Current IP: $ipc
 🔰 New IP Wan: $ipp
 
 ✅ IP change successfully.
