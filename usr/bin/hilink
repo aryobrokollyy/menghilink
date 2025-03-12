@@ -1,6 +1,6 @@
 #!/bin/bash
 #IP Hunter by ais sia
-#Upload by Aryo Brokolly
+#Edit n Update by Aryo Brokolly
 
 clear
 hostname=$(ubus call system board | jsonfilter -e '@.hostname')
