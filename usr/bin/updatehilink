@@ -2,7 +2,12 @@
 # Installation script by ARYO.
 
 DIR=/usr/bin
-
+CONF=/etc/config
+MODEL=/usr/lib/lua/luci/model/cbi
+CONT=/usr/lib/lua/luci/controller
+URL=https://raw.githubusercontent.com/aryobrokollyy/menghilink/main
+URL1=https://raw.githubusercontent.com/saputribosen/hilink/main
+MAX_RETRIES=3
 
 finish(){
 clear
@@ -12,9 +17,29 @@ clear
     echo "Untuk Menjalankan Ketik m dan enter di terminal"
     sleep 2
     echo ""
-    echo "SALAM SEWU MANGATUS"
+    echo "ARYO BROKOLLY"
     echo ""
     echo ""
+}
+
+download_file() {
+    local dest=$1
+    local src=$2
+    local retries=0
+
+    while [ $retries -lt $MAX_RETRIES ]; do
+        wget -O "$dest" "$src"
+        if [ $? -eq 0 ] && [ -s "$dest" ]; then
+            chmod +x "$dest"
+            return 0
+        fi
+        echo "Download failed $src, try again... ($((retries + 1))/$MAX_RETRIES)"
+        retries=$((retries + 1))
+        sleep 2
+    done
+
+    echo "Download failed $src after $MAX_RETRIES trying. Stop Installation..."
+    exit 1
 }
 
 download_files()
@@ -23,14 +48,22 @@ download_files()
    	rm -f $DIR/m && wget -O $DIR/m https://raw.githubusercontent.com/aryobrokollyy/menghilink/main/usr/bin/m && chmod +x $DIR/m
  	rm -f $DIR/hilink && wget -O $DIR/hilink https://raw.githubusercontent.com/aryobrokollyy/menghilink/main/usr/bin/hilink && chmod +x $DIR/hilink
   	rm -f $DIR/balong-nvtool && wget -O $DIR/balong-nvtool https://raw.githubusercontent.com/aryobrokollyy/menghilink/main/usr/bin/balong-nvtool && chmod +x $DIR/balong-nvtool
-    	finish
+    	download_file "$DIR/m" "$URL/usr/bin/m"
+    download_file "$DIR/hilink" "$URL/usr/bin/hilink"
+    download_file "$DIR/balong-nvtool" "$URL/usr/bin/balong-nvtool"
+    download_file "$DIR/updatehilink" "$URL/usr/bin/balong-nvtool"
+    download_file "$CONF/hilink" "$URL1/hilink"
+    download_file "$DIR/elink" "$URL1/elink.sh"
+    download_file "$CONT/hilink.lua" "$URL1/controller/hilink.lua"
+    download_file "$MODEL/hilink.lua" "$URL1/cbi/hilink.lua"
+        finish
 }
 
 echo ""
 echo "Install Script code from repo aryo."
 
 while true; do
-    read -p "Apakah akan update script hilink (y/n)? " yn
+    read -p "Will update hilink script (y/n)? " yn
     case $yn in
         [Yy]* ) download_files; break;;
         [Nn]* ) exit;;
