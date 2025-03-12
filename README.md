@@ -12,9 +12,16 @@ Copy paste on terminal OPENWRT:
 bash -c "$(wget -qO - 'https://raw.githubusercontent.com/aryobrokollyy/menghilink/master/setup.sh')"
 ```
 
-# How to run this script
-- This script detects internet connection
+# How to ?
+- Update Script
+```
+hilink update
+```
 
+- Uninstall Script
+```
+hilink uninstall
+```
 
 <br>
 <br>
